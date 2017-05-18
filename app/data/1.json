@@ -1,0 +1,42 @@
+{
+			"name": "BHT Angular Camp",
+			"date": "01/01/2017",
+			"time": "10:30 am",
+			"price": 100,
+			"location": {
+					"address": "13 Roselzel RD",
+					"city": "Princeton",
+					"state": "NJ"
+			},
+			"imageUrl" :"img/AngularJS.png",
+			"sessions":[
+				{
+					"name": "Angular Class",
+					"creatorName": "Steven",
+					"duration": "1",
+					"level" : "advanced",
+					"abstract":"In this session you will learn about how to use Angularjs",
+					"upVoteCount": "150"
+					
+				},
+				{
+					"name": "React Class",
+					"creatorName": "Calvin",
+					"duration": "2",
+					"level" : "introductory",
+					"abstract":"This session will take closer loot at react",
+					"upVoteCount": "4"
+					
+				},
+				{
+					"name": "Marketing Class",
+					"creatorName": "Chris",
+					"duration": "4",
+					"level" : "intermediate",
+					"abstract":"In this session you will learn how to talk a big",
+					"upVoteCount": "30"
+
+				}
+				
+			]
+}

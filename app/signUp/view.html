@@ -1,0 +1,62 @@
+<div class="container">
+    <div class="wapper">
+        <h2>Create an Account</h2>
+        <hr>
+        <form name='signUpForm' method="get" ng-submit="addUser()" action="">
+            <div class="form-group" ng-class="{'has-success':signUpForm.email.$valid}">
+                <label>UserName</label><br>
+                <input name='email'
+                       type="email"
+                       placeholder="Email"
+                       class='form-control'
+                       ng-model="user.email"
+                       required
+                >
+                <p class="fa fa-check success input-result" ng-if="signUpForm.email.$valid"></p>
+                <p class="error" ng-if="signUpForm.email.$error.email&&signUpForm.email.$dirty">
+                    Not a valid Email!
+                </p>
+                <p class="error" ng-if="signUpForm.email.$error.required&&signUpForm.email.$dirty">
+                    Email can't be empty!
+                </p>
+            </div>
+            <div class="form-group" ng-class="{'has-success':signUpForm.password.$valid}">
+                <label>Password</label><br>
+                <input name='password'
+                       type="password"
+                       placeholder="Password"
+                       class='form-control'
+                       ng-model="user.password"
+                       ng-minlength="6"
+                       ng-maxlength="16"
+                       required
+                >
+                <p class="fa fa-check success input-result" ng-if="signUpForm.password.$valid"></p>
+                <p class="error" ng-if="signUpForm.password.$error.minlength||signUpForm.password.$error.maxlength&&signUpForm.password.$dirty">
+                The length of password should be between 6-16
+                </p>
+                <p class="error" ng-if="signUpForm.password.$error.required&&signUpForm.password.$dirty">
+                    Password can't be empty!
+                </p>
+            </div>
+
+            <div class="form-group" ng-class="{'has-success':signUpForm.email.$valid}">
+                <label>Confirm Password</label><br>
+                <input name='password2'
+                       type="password"
+                       placeholder="Confirm Password"
+                       class='form-control'
+                       ng-model="user.password2"
+                       compare = 'user.password'
+                       required
+                >
+                <p class="fa fa-check success input-result" ng-if="signUpForm.password2.$valid"></p>
+                <p class="error" ng-if="signUpForm.password2.$error.compare&&signUpForm.password2.$dirty">
+                    The two passwords should be same
+                </p>
+            </div>
+            <button class="btn btn-primary"  ng-disabled='signUpForm.$invalid' >Submit</button>
+        </form>
+    </div>
+
+</div>

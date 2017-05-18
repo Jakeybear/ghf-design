@@ -1,0 +1,55 @@
+/* app css stylesheet */
+
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+
+.menu:before {
+    content: "[";
+}
+
+.menu:after {
+    content: "]";
+}
+
+.menu > li {
+    display: inline;
+}
+
+.menu > li + li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+
+.container .wapper{
+    width: 300px;
+    margin: 30px auto;
+}
+
+.error {
+    color: #a10;
+}
+
+input.error {
+    border:1px;
+    solid-color: #a10;
+}
+
+p.success {
+    color:#3cae4c;
+}
+
+.input-result{
+    position:relative;
+    left: 280px;
+    top: -27px;;
+}
+
+[class*="span"] {
+    float: left;
+    min-height: 1px;
+    margin-left: 20px;
+}
